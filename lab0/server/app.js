@@ -5,15 +5,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var aws = require('aws-sdk'); 
-require('dotenv').config();
-aws.config.update({
-  region: 'us-east-1', // Put your aws region here
-  accessKeyId: process.env.AWSAccessKeyId,
-  secretAccessKey: process.env.AWSSecretKey
-})
-
-const S3_BUCKET = process.env.bucket
 
 
 var indexRouter = require('./routes/index');
