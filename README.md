@@ -1,1 +1,3 @@
-# 518-Lab1
+# frontend-assignment-HQtom
+frontend-assignment-HQtom created by GitHub Classroom
+Lab assignment is inside folder lab0
