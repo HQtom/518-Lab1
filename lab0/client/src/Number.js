@@ -18,7 +18,7 @@ const Number = ()=>{
         let a = document.getElementById('num').value
         let b = document.getElementById('num2').value
         try{
-            let data = await axios.post("http://localhost:4000/Num",{Num:a,Num2:b})//post numbers to server
+            let data = await axios.post("http://ec2-44-202-198-222.compute-1.amazonaws.com:4000/Num",{Num:a,Num2:b})//post numbers to server
             console.log(data)
             setnum(data.data.Num)// calculate sum from server
             setsum(parseInt(a)+parseInt(b))//calculate addition in reactJS
