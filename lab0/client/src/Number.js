@@ -10,8 +10,11 @@ const Number = ()=>{
     
     const[num,setnum]=useState(undefined)// state var to get number from backend
 
-
     const[num2,setsum]=useState(undefined)// state var of front end
+
+    const[profile1,setp1]=useState("Haowei Qing")//state of name part
+    
+    const[profile2,setp2]=useState("Personal profile is empty. Please type :)")//state of description
 
     let result = 0
     const resNum = async() =>{
@@ -29,7 +32,12 @@ const Number = ()=>{
         //     sum: parseInt(a)+parseInt(b)
         // })    
     }
-
+    const handleChange = (event) =>{
+        setp1(event.target.value)
+    }
+    const handleChange2 = (event) =>{
+        setp2(event.target.value)
+    }
     return(
         
         <><div>
@@ -60,8 +68,9 @@ const Number = ()=>{
                 <img decoding="async" src={img2} ></img>
                 </div>
             <div className="col-6 ">
-                <h2>Haowei Qing</h2>
-                <p>Hello my name is Haowei I am a graduate student</p>
+                <input type="text" value={profile1} onChange={handleChange} style={{ width: 400 }} className="p1"/> 
+                <p className="p1">{profile1 }</p>
+                <textarea type="text" value={profile2} onChange={handleChange2} style={{height: 200, width: 400} }/> 
                 </div>
             
         </div>
